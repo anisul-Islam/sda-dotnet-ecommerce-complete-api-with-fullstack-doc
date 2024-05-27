@@ -1,0 +1,53 @@
+GET http://localhost:5267/api/users?PageNumber=1&PageSize=2
+
+###
+
+GET http://localhost:5267/api/users/4ee4fcff-6288-4997-b6fe-a7947723506f
+###
+
+GET http://localhost:5267/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJjMTU4OTliOS0zNTQzLTQ2YzQtOGYxNy1mZjQzMzI4NDFhNDEiLCJ1bmlxdWVfbmFtZSI6InVzZXIzIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE3MTUwNTc0OTcsImV4cCI6MTcxNTA1NzU1NywiaWF0IjoxNzE1MDU3NDk3LCJpc3MiOiJMb2NhbGhvc3RJc3N1ZXIiLCJhdWQiOiJMb2NhbGhvc3RBdWRpZW5jZSJ9._QMRDABPWYDV3c4nhnlX2SvCXFkf2ipZiiSLjBC0XW4
+
+###
+
+GET http://localhost:5267/api/users/ban-unban/4ee4fcff-6288-4997-b6fe-a7947723506f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0ZWU0ZmNmZi02Mjg4LTQ5OTctYjZmZS1hNzk0NzcyMzUwNmYiLCJ1bmlxdWVfbmFtZSI6InN0cmluZyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTcxNTE2Njc5NiwiZXhwIjoxNzE1MTY2ODU2LCJpYXQiOjE3MTUxNjY3OTYsImlzcyI6IkxvY2FsaG9zdElzc3VlciIsImF1ZCI6IkxvY2FsaG9zdEF1ZGllbmNlIn0.qwlv8ToIKTt71LWhnVKAEVg5Q1y127wHYIFESs3MkeA
+
+###
+
+POST http://localhost:5267/api/users/login
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "string"
+}
+
+
+###
+
+POST http://localhost:5267/api/users/reset-password/4ee4fcff-6288-4997-b6fe-a7947723506f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0ZWU0ZmNmZi02Mjg4LTQ5OTctYjZmZS1hNzk0NzcyMzUwNmYiLCJ1bmlxdWVfbmFtZSI6InN0cmluZyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTcxNTE2OTQzOCwiZXhwIjoxNzE1MTY5NDk4LCJpYXQiOjE3MTUxNjk0MzgsImlzcyI6IkxvY2FsaG9zdElzc3VlciIsImF1ZCI6IkxvY2FsaG9zdEF1ZGllbmNlIn0.4RinPqcQHpTEKX1DdvPjzoTdTeVbIW7mQTvf4bD30e4
+Content-Type: application/json
+
+{
+  "newPassword": "anisul"
+}
+
+###
+
+GET http://localhost:5267/api/users/banned-users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0ZWU0ZmNmZi02Mjg4LTQ5OTctYjZmZS1hNzk0NzcyMzUwNmYiLCJ1bmlxdWVfbmFtZSI6InN0cmluZyIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTcxNTE2ODI1OCwiZXhwIjoxNzE1MTY4MzE4LCJpYXQiOjE3MTUxNjgyNTgsImlzcyI6IkxvY2FsaG9zdElzc3VlciIsImF1ZCI6IkxvY2FsaG9zdEF1ZGllbmNlIn0.726y6M8McMxwM8jWzQf-kPtgBQytYapsyH4QJIhCHBs
+
+###
+
+POST http://localhost:5267/api/users
+Content-Type: application/json
+
+{
+  "name": "user3",
+  "email": "user3@example.com",
+  "password": "string",
+  "address": "string",
+  "image": "string"
+}
