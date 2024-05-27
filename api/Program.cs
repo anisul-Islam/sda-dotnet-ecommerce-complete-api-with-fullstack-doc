@@ -13,6 +13,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Load environment variables from .env file
 DotNetEnv.Env.Load();
 
+// Configure the configuration sources
+// builder.Configuration
+//     .AddEnvironmentVariables() // Add environment variables
+//     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true) // Add appsettings.json
+//     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true) // Add environment specific appsettings.json
+//     .AddUserSecrets<Program>(); // Add user secrets if any
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
